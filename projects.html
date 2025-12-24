@@ -27,7 +27,7 @@
                 <li><a href="projects.html" class="active">Projects</a></li>
                 <li><a href="clients.html">Clients</a></li>
                 <a href="contact.html" class="btn btn-primary"
-                        style="padding: 10px 24px; font-size: 0.9rem; color: var(--white);">Contact Us</a>
+                    style="padding: 10px 24px; font-size: 0.9rem; color: var(--white);">Contact Us</a>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -48,7 +48,7 @@
     </section>
 
     <!-- Projects Gallery -->
-    <section class="section">
+    <section class="section" style="background-color: var(--white);">
         <div class="container">
             <!-- Filters -->
             <div class="filter-buttons reveal">
@@ -194,9 +194,21 @@
             });
         });
 
-        // Add fadeIn keyframes if not present, commonly existing in CSS but let's ensure
-        // We can just rely on block/none for MVP, or reuse the 'reveal' class triggered by scroll
-        // But for filtering, immediate response is better.
+        // Mobile Tap Support
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+        if (isMobile) {
+            gridItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    // Close others
+                    gridItems.forEach(el => {
+                        if (el !== item) el.classList.remove('active');
+                    });
+                    // Toggle current
+                    item.classList.toggle('active');
+                });
+            });
+        }
     </script>
 </body>
 

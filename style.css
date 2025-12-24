@@ -55,7 +55,8 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--text-dark);
     line-height: 1.6;
-    background-color: var(--white);
+    background-color: #0B1120;
+    /* background-color: var(--white); */
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -729,7 +730,8 @@ footer {
 
 /* Always show overlay text at bottom on mobile, or just on hover for desktop? 
    Let's make it visible on hover for desktop, but maybe always a slight gradient. */
-.grid-item:hover .grid-overlay {
+.grid-item:hover .grid-overlay,
+.grid-item.active .grid-overlay {
     opacity: 1;
 }
 
@@ -750,7 +752,9 @@ footer {
 }
 
 .grid-item:hover .grid-overlay h3,
-.grid-item:hover .grid-overlay p {
+.grid-item:hover .grid-overlay p,
+.grid-item.active .grid-overlay h3,
+.grid-item.active .grid-overlay p {
     transform: translateY(0);
 }
 
