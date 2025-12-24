@@ -296,7 +296,7 @@ header.scrolled .bar {
     padding-top: var(--header-height);
     /* Safe fallback overlap padding */
     padding-bottom: 60px;
-    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.7)), url('https://cdn.pixabay.com/photo/2020/11/12/01/39/building-5734055_1280.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -356,7 +356,7 @@ header.scrolled .bar {
     margin-top: -60px;
     border-radius: 16px;
     box-shadow: var(--shadow-lg);
-    max-width: 1100px;
+    max-width: 400px;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid var(--border-color);
